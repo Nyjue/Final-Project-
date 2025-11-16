@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Resources - Campus Life Super App</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Campus Life Super App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="resources.html">Resources</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">Campus Resources</h1>
+        
+        
+        <ul class="nav nav-tabs" id="resourcesTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="academic-tab" data-bs-toggle="tab" data-bs-target="#academic" type="button">Academic</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="health-tab" data-bs-toggle="tab" data-bs-target="#health" type="button">Health & Wellness</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="career-tab" data-bs-toggle="tab" data-bs-target="#career" type="button">Career Services</button>
+            </li>
+        </ul>
+        
+        <div class="tab-content p-4 border border-top-0 rounded-bottom" id="resourcesTabContent">
+            
+            <div class="tab-pane fade show active" id="academic" role="tabpanel">
+                <h3>Academic Resources</h3>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Library</h5>
+                                <p class="card-text">Access books, journals, and research databases.</p>
+                                <p><strong>Hours:</strong> Mon-Fri: 8am-10pm, Sat-Sun: 10am-6pm</p>
+                                <button class="btn btn-outline-primary" data-resource="library">More Info</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Tutoring Center</h5>
+                                <p class="card-text">Get help with your coursework from peer tutors.</p>
+                                <p><strong>Hours:</strong> Mon-Thu: 9am-9pm, Fri: 9am-5pm</p>
+                                <button class="btn btn-outline-primary" data-resource="tutoring">More Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+         
+            <div class="tab-pane fade" id="health" role="tabpanel">
+                <h3>Health & Wellness Resources</h3>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Health Center</h5>
+                                <p class="card-text">Medical services for students.</p>
+                                <p><strong>Hours:</strong> Mon-Fri: 8am-5pm</p>
+                                <button class="btn btn-outline-primary" data-resource="health">More Info</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Counseling Services</h5>
+                                <p class="card-text">Mental health support for students.</p>
+                                <p><strong>Hours:</strong> Mon-Fri: 9am-5pm</p>
+                                <button class="btn btn-outline-primary" data-resource="counseling">More Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+         
+            <div class="tab-pane fade" id="career" role="tabpanel">
+                <h3>Career Services</h3>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Career Center</h5>
+                                <p class="card-text">Resume reviews, mock interviews, and career counseling.</p>
+                                <p><strong>Hours:</strong> Mon-Fri: 9am-5pm</p>
+                                <button class="btn btn-outline-primary" data-resource="career">More Info</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Internship Office</h5>
+                                <p class="card-text">Find and apply for internship opportunities.</p>
+                                <p><strong>Hours:</strong> Mon-Fri: 10am-4pm</p>
+                                <button class="btn btn-outline-primary" data-resource="internship">More Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-5">
+            <h3>Resource Availability API</h3>
+            <div id="resource-availability" class="alert alert-success">
+                <p>Resource availability API integration will be displayed here.</p>
+                <button id="checkAvailability" class="btn btn-outline-success">Check Availability</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container text-center">
+            <p>&copy; 2023 Campus Life Super App. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
