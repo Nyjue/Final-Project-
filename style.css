@@ -76,3 +76,31 @@ footer {
 .alert {
     border-radius: 10px;
 }
+
+
+
+.weather-display {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.weather-extras {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.spinner-border {
+    width: 2rem;
+    height: 2rem;
+}
+
+.alert {
+    border: none;
+    border-radius: 10px;
+}
+
+.btn {
+    border-radius: 20px;
+    margin: 2px;
+}
