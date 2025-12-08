@@ -4,127 +4,210 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Resources - Campus Life Super App</title>
+    <meta name="description" content="Access academic, health, and career resources on campus">
     
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <!-- Navigation with improved accessibility -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" aria-label="Main navigation">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Campus Life Super App</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-university me-2"></i>Campus Life Super App
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home me-1"></i>Home
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="events.html">Events</a>
+                        <a class="nav-link" href="events.html">
+                            <i class="fas fa-calendar-alt me-1"></i>Events
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="resources.html">Resources</a>
+                        <a class="nav-link active" aria-current="page" href="resources.html">
+                            <i class="fas fa-book me-1"></i>Resources
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container mt-5">
+    <!-- Main Content -->
+    <main class="container mt-4">
         <h1 class="text-center mb-5">Campus Resources</h1>
         
-        
-        <ul class="nav nav-tabs" id="resourcesTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="academic-tab" data-bs-toggle="tab" data-bs-target="#academic" type="button">Academic</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="health-tab" data-bs-toggle="tab" data-bs-target="#health" type="button">Health & Wellness</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="career-tab" data-bs-toggle="tab" data-bs-target="#career" type="button">Career Services</button>
-            </li>
-        </ul>
-        
-        <div class="tab-content p-4 border border-top-0 rounded-bottom" id="resourcesTabContent">
-            
-            <div class="tab-pane fade show active" id="academic" role="tabpanel">
-                <h3>Academic Resources</h3>
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Library</h5>
-                                <p class="card-text">Access books, journals, and research databases.</p>
-                                <p><strong>Hours:</strong> Mon-Fri: 8am-10pm, Sat-Sun: 10am-6pm</p>
-                                <button class="btn btn-outline-primary" data-resource="library">More Info</button>
+        <!-- Resource Categories Tabs -->
+        <div class="row">
+            <div class="col-12">
+                <ul class="nav nav-tabs" id="resourcesTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="academic-tab" data-bs-toggle="tab" 
+                                data-bs-target="#academic" type="button" role="tab" 
+                                aria-controls="academic" aria-selected="true">
+                            <i class="fas fa-graduation-cap me-2"></i>Academic
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="health-tab" data-bs-toggle="tab" 
+                                data-bs-target="#health" type="button" role="tab" 
+                                aria-controls="health" aria-selected="false">
+                            <i class="fas fa-heartbeat me-2"></i>Health & Wellness
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="career-tab" data-bs-toggle="tab" 
+                                data-bs-target="#career" type="button" role="tab" 
+                                aria-controls="career" aria-selected="false">
+                            <i class="fas fa-briefcase me-2"></i>Career Services
+                        </button>
+                    </li>
+                </ul>
+                
+                <!-- Tab Content -->
+                <div class="tab-content p-4 border border-top-0 rounded-bottom shadow-sm" id="resourcesTabContent">
+                    
+                    <!-- Academic Resources -->
+                    <div class="tab-pane fade show active" id="academic" role="tabpanel" aria-labelledby="academic-tab">
+                        <h2 class="mb-4">Academic Resources</h2>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-primary text-white">
+                                        <h5 class="card-title mb-0">
+                                            <i class="fas fa-book me-2"></i>Library
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Access books, journals, research databases, and study spaces.</p>
+                                        <p><strong>Hours:</strong> Mon-Fri: 8am-10pm, Sat-Sun: 10am-6pm</p>
+                                        <p><strong>Location:</strong> Main Campus Building, 2nd Floor</p>
+                                        <button class="btn btn-outline-primary" data-resource="library" 
+                                                aria-label="More information about library services">
+                                            <i class="fas fa-info-circle me-1"></i>More Info
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-primary text-white">
+                                        <h5 class="card-title mb-0">
+                                            <i class="fas fa-chalkboard-teacher me-2"></i>Tutoring Center
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Get help with your coursework from peer tutors in all major subjects.</p>
+                                        <p><strong>Hours:</strong> Mon-Thu: 9am-9pm, Fri: 9am-5pm</p>
+                                        <p><strong>Location:</strong> Student Success Center</p>
+                                        <button class="btn btn-outline-primary" data-resource="tutoring" 
+                                                aria-label="More information about tutoring services">
+                                            <i class="fas fa-info-circle me-1"></i>More Info
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Tutoring Center</h5>
-                                <p class="card-text">Get help with your coursework from peer tutors.</p>
-                                <p><strong>Hours:</strong> Mon-Thu: 9am-9pm, Fri: 9am-5pm</p>
-                                <button class="btn btn-outline-primary" data-resource="tutoring">More Info</button>
+                    
+                    <!-- Health & Wellness Resources -->
+                    <div class="tab-pane fade" id="health" role="tabpanel" aria-labelledby="health-tab">
+                        <h2 class="mb-4">Health & Wellness Resources</h2>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-success text-white">
+                                        <h5 class="card-title mb-0">
+                                            <i class="fas fa-clinic-medical me-2"></i>Health Center
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Medical services, vaccinations, and health consultations for students.</p>
+                                        <p><strong>Hours:</strong> Mon-Fri: 8am-5pm</p>
+                                        <p><strong>Emergency:</strong> Call Campus Security at x4911</p>
+                                        <button class="btn btn-outline-success" data-resource="health" 
+                                                aria-label="More information about health center services">
+                                            <i class="fas fa-info-circle me-1"></i>More Info
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-success text-white">
+                                        <h5 class="card-title mb-0">
+                                            <i class="fas fa-comments me-2"></i>Counseling Services
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Confidential mental health support and counseling sessions.</p>
+                                        <p><strong>Hours:</strong> Mon-Fri: 9am-5pm</p>
+                                        <p><strong>Appointments:</strong> Call x4920 or book online</p>
+                                        <button class="btn btn-outline-success" data-resource="counseling" 
+                                                aria-label="More information about counseling services">
+                                            <i class="fas fa-info-circle me-1"></i>More Info
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            
-         
-            <div class="tab-pane fade" id="health" role="tabpanel">
-                <h3>Health & Wellness Resources</h3>
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Health Center</h5>
-                                <p class="card-text">Medical services for students.</p>
-                                <p><strong>Hours:</strong> Mon-Fri: 8am-5pm</p>
-                                <button class="btn btn-outline-primary" data-resource="health">More Info</button>
+                    
+                    <!-- Career Services -->
+                    <div class="tab-pane fade" id="career" role="tabpanel" aria-labelledby="career-tab">
+                        <h2 class="mb-4">Career Services</h2>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-warning text-dark">
+                                        <h5 class="card-title mb-0">
+                                            <i class="fas fa-user-tie me-2"></i>Career Center
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Resume reviews, mock interviews, and career counseling.</p>
+                                        <p><strong>Hours:</strong> Mon-Fri: 9am-5pm</p>
+                                        <p><strong>Services:</strong> Drop-in hours 2-4pm daily</p>
+                                        <button class="btn btn-outline-warning" data-resource="career" 
+                                                aria-label="More information about career center services">
+                                            <i class="fas fa-info-circle me-1"></i>More Info
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Counseling Services</h5>
-                                <p class="card-text">Mental health support for students.</p>
-                                <p><strong>Hours:</strong> Mon-Fri: 9am-5pm</p>
-                                <button class="btn btn-outline-primary" data-resource="counseling">More Info</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-         
-            <div class="tab-pane fade" id="career" role="tabpanel">
-                <h3>Career Services</h3>
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Career Center</h5>
-                                <p class="card-text">Resume reviews, mock interviews, and career counseling.</p>
-                                <p><strong>Hours:</strong> Mon-Fri: 9am-5pm</p>
-                                <button class="btn btn-outline-primary" data-resource="career">More Info</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Internship Office</h5>
-                                <p class="card-text">Find and apply for internship opportunities.</p>
-                                <p><strong>Hours:</strong> Mon-Fri: 10am-4pm</p>
-                                <button class="btn btn-outline-primary" data-resource="internship">More Info</button>
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-warning text-dark">
+                                        <h5 class="card-title mb-0">
+                                            <i class="fas fa-briefcase me-2"></i>Internship Office
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Find and apply for internship opportunities with local companies.</p>
+                                        <p><strong>Hours:</strong> Mon-Fri: 10am-4pm</p>
+                                        <p><strong>Portal:</strong> Access via student dashboard</p>
+                                        <button class="btn btn-outline-warning" data-resource="internship" 
+                                                aria-label="More information about internship opportunities">
+                                            <i class="fas fa-info-circle me-1"></i>More Info
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -132,23 +215,85 @@
             </div>
         </div>
         
-        <div class="mt-5">
-            <h3>Resource Availability API</h3>
-            <div id="resource-availability" class="alert alert-success">
-                <p>Resource availability API integration will be displayed here.</p>
-                <button id="checkAvailability" class="btn btn-outline-success">Check Availability</button>
+        <!-- Resource Availability API Section -->
+        <section class="mt-5" aria-labelledby="availability-heading">
+            <h3 id="availability-heading" class="mb-4">Real-time Resource Availability</h3>
+            <div id="resource-availability" class="alert alert-success shadow-sm">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="alert-heading mb-2">
+                            <i class="fas fa-chart-line me-2"></i>Current Resource Status
+                        </h5>
+                        <p class="mb-0">Check real-time availability of campus resources and facilities.</p>
+                    </div>
+                    <button id="checkAvailability" class="btn btn-success" 
+                            aria-label="Check current resource availability">
+                        <i class="fas fa-sync-alt me-1"></i>Check Now
+                    </button>
+                </div>
+                <div id="availability-results" class="mt-3" style="display: none;">
+                    <!-- Results will be loaded here -->
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
+        
+        <!-- Quick Links Section -->
+        <section class="mt-5" aria-labelledby="quicklinks-heading">
+            <h3 id="quicklinks-heading" class="mb-4">Quick Links</h3>
+            <div class="row">
+                <div class="col-md-3 col-6 mb-3">
+                    <a href="https://library.campus.edu" class="btn btn-outline-primary w-100" 
+                       target="_blank" aria-label="Visit the library website">
+                        <i class="fas fa-external-link-alt me-2"></i>Library Website
+                    </a>
+                </div>
+                <div class="col-md-3 col-6 mb-3">
+                    <a href="https://health.campus.edu" class="btn btn-outline-success w-100" 
+                       target="_blank" aria-label="Visit the health services website">
+                        <i class="fas fa-external-link-alt me-2"></i>Health Services
+                    </a>
+                </div>
+                <div class="col-md-3 col-6 mb-3">
+                    <a href="https://career.campus.edu" class="btn btn-outline-warning w-100" 
+                       target="_blank" aria-label="Visit the career center website">
+                        <i class="fas fa-external-link-alt me-2"></i>Career Portal
+                    </a>
+                </div>
+                <div class="col-md-3 col-6 mb-3">
+                    <a href="https://tutoring.campus.edu" class="btn btn-outline-info w-100" 
+                       target="_blank" aria-label="Visit the tutoring center website">
+                        <i class="fas fa-external-link-alt me-2"></i>Tutoring Schedule
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
+    <!-- Footer -->
     <footer class="bg-dark text-white mt-5 py-4">
-        <div class="container text-center">
-            <p>&copy; 2023 Campus Life Super App. All rights reserved.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Campus Life Super App</h5>
+                    <p class="mb-0">Your all-in-one campus experience platform</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-1">&copy; <span id="current-year">2023</span> Campus Life Super App</p>
+                    <p class="mb-0">All rights reserved</p>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
+    <!-- Custom JavaScript -->
     <script src="js/script.js"></script>
+    
+    <!-- Initialize current year -->
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
