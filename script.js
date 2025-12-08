@@ -1,9 +1,4 @@
-/**
- * Campus Life Super App - Enhanced JavaScript
- * Version 2.0 - Improved with better structure, error handling, and mobile support
- */
 
-// Document ready function with error handling
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Campus Life Super App loaded successfully!');
     
